@@ -9,3 +9,7 @@ Check the [LIVE VIEW](https://backy22-react-shopping.netlify.app/).
 npm install
 npm start
 ```
+
+# Skills
+* react hook
+* Material UI
