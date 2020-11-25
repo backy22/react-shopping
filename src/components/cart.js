@@ -116,7 +116,7 @@ const Cart = (props) => {
 
     return (
         <Grid container>
-            <Grid xs={8} className={classes.mealsList}>
+            <Grid xs={8} item className={classes.mealsList}>
                 <h3>Your cart</h3>
                 {meals.map((meal, index) => (
                     <Meal 
@@ -129,7 +129,7 @@ const Cart = (props) => {
                     />
                 ))}
             </Grid>
-            <Grid xs={4} className={classes.summary}>
+            <Grid xs={4} item className={classes.summary}>
                 <h3>Summary</h3>
                 <Paper className={classes.summaryPaper}>
                     {meals.map((meal, index) => (
