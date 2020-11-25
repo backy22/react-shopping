@@ -83,7 +83,7 @@ const Meal = (props) => {
                 />
             </div>
             <div>
-            <Button  onClick={() => props.removeCart(props.index)} variant="outlined" color="primary">Remove</Button>
+            <Button  onClick={() => props.removeCart(props.meal.id)} variant="outlined" color="primary">Remove</Button>
             </div>
         </Paper>
     )
@@ -118,10 +118,9 @@ const Cart = (props) => {
         <Grid container>
             <Grid xs={8} item className={classes.mealsList}>
                 <h3>Your cart</h3>
-                {meals.map((meal, index) => (
+                {meals.map((meal) => (
                     <Meal 
-                        key={index}
-                        index={index}
+                        key={meal.id}
                         removeCart={actions.removeCart}
                         changeQuantity={actions.changeQuantity}
                         meal={meal}

@@ -4,9 +4,9 @@ export const addCart = (store, id) => {
     store.setState({ meals: meals });
 };
 
-export const removeCart = (store, index) => {
+export const removeCart = (store, id) => {
     const meals = store.state.meals;
-    meals[index].inCart = false;
+    meals.find(meal => meal.id === id).inCart = false;
     store.setState({ meals: meals });
 };
 
